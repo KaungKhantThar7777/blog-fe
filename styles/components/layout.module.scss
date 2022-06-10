@@ -1,0 +1,12 @@
+.layout {
+  width: 97.5%;
+  height: 100%;
+  max-width: 850px;
+  min-height: 100vh;
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  display: flex;
+  flex-direction: column;
+}

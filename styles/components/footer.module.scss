@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  padding: 24px 40px;
+  &__links {
+    a {
+      margin-right: 16px;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
