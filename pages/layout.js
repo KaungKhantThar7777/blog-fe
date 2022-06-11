@@ -4,12 +4,13 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 import classes from "../styles/components/layout.module.scss";
+
 const Layout = ({ children, title = "default page title " }) => {
   return (
     <div className={classes.layout}>
       <Head>
         <title>{title}</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Header />

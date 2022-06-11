@@ -11,6 +11,13 @@
       color: inherit;
     }
   }
+  &__logo {
+    a {
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
   &__logo__icon {
     margin-right: 10px;
     font-size: 24px;
@@ -20,7 +27,7 @@
   }
   &__links {
     a {
-      margin-right: 16px;
+      margin-right: 36px;
     }
   }
   @media screen and (max-width: 600px) {

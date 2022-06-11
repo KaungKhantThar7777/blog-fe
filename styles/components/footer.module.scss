@@ -3,12 +3,33 @@
   flex-direction: column;
   align-items: center;
   margin-top: auto;
-  padding: 24px 40px;
+  padding: 40px;
+
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 0 solid transparent;
+  box-sizing: content-box;
+  overflow: visible;
+
   &__links {
     a {
       margin-right: 16px;
       color: inherit;
       text-decoration: none;
+    }
+  }
+
+  &__copyright {
+    p {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 10px;
+    &__copyright {
+      p {
+        text-align: center;
+      }
     }
   }
 }

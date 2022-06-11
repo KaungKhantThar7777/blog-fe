@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -15,4 +17,18 @@ body {
 
 a:focus {
   outline: none;
+}
+
+a {
+  color: inherit;
+  transition: border-bottom 0.2s ease-out;
+  text-decoration: none;
+  &:hover {
+    border-bottom: 2px solid #272727;
+    color: #272727;
+  }
+}
+
+ul {
+  list-style-type: none;
 }
