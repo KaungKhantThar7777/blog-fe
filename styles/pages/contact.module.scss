@@ -1,0 +1,93 @@
+.contact {
+  min-height: calc(100vh - (85px + 225px));
+  margin-top: 80px;
+  margin-bottom: 40px;
+  &__intro {
+    h1 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    p {
+      margin-bottom: 25px;
+      font-size: 18px;
+      line-height: 26px;
+      max-width: 65ch;
+    }
+  }
+  &__intro:last-child {
+    margin-bottom: 0px;
+  }
+  &__socials {
+    ul {
+      padding: 40px 0;
+
+      font-size: 18px;
+    }
+
+    ul li {
+      padding-left: 24px;
+      margin-left: 24px;
+      position: relative;
+      list-style-type: none;
+      margin-bottom: 10px;
+      line-height: 24px;
+    }
+
+    ul li:before {
+      content: "\2022 ";
+      position: absolute;
+      left: 0;
+      color: #929292;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    ul li a {
+      color: #5183f5;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid #e2eafd;
+    }
+
+    ul li a:hover {
+      color: #2161f2;
+      background: #f0f4fe;
+      border-bottom: 2px solid #2161f2;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 0px) {
+  .contact__intro {
+    margin-bottom: 50px;
+  }
+
+  .contact__intro h1 {
+    font-size: 24px;
+  }
+
+  .contact__socials h2 {
+    font-size: 18px;
+  }
+
+  .contact__intro p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .contact__soials ul {
+    font-size: 13.5px;
+  }
+
+  .contact__soials ul li {
+    padding-left: 18px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+  }
+}

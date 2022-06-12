@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.footer__links}>
         <Link href="/blog">Blog</Link>
-        <Link href="/about">About</Link>
+        {/* <Link href="/about">About</Link> */}
         <Link href="/contact">Contact</Link>
       </div>
       <div className={classes.footer__copyright}>

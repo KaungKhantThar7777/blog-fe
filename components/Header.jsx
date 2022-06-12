@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <div className={classes.header__links}>
           <Link href="/blog">Blog</Link>
-          <Link href="/about">About</Link>
+          {/* <Link href="/about">About</Link> */}
           <Link href="/contact">Contact</Link>
         </div>
       </div>

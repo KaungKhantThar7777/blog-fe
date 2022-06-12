@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./layout";
+import Layout from "../components/layout";
 
 import classes from "../styles/pages/homepage.module.scss";
 import Link from "next/link";
@@ -7,7 +7,10 @@ import BlogCard from "../components/BlogCard";
 
 const Index = () => {
   return (
-    <Layout title="Homepage">
+    <Layout
+      title="Coding Blog"
+      description="Kaung Khant Thar is a frontend developer who love to share knowledge about coding"
+    >
       <div className={classes.homepage}>
         <h1>
           Halo guys, I was a university student from Myanmar and currently

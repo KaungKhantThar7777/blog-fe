@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Prism from "prismjs";
 
 import { useRouter } from "next/router";
-import Layout from "pages/layout";
+import Layout from "components/layout";
 
 import "prismjs/plugins/line-numbers/prism-line-numbers.js";
 import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js";
@@ -14,11 +14,16 @@ const BlogPost = () => {
   const { title = "" } = router.query;
 
   useEffect(() => {
-    Prism.highlightAll();
+    if (typeof window !== "undefined") {
+      Prism.highlightAll();
+    }
   }, []);
 
   return (
-    <Layout title={title}>
+    <Layout
+      title={`${title} | Coding Blog`}
+      description={"will be pulled from BE api"}
+    >
       <div className={classes.blog_post}>
         <div className={classes.blog_post__top__section}>
           <h1>{title}</h1>
@@ -37,31 +42,26 @@ const BlogPost = () => {
 
         <div className={classes.blog_post__body__content}>
           <p>Blog post content will go here!</p>
-
           <h2>h2 Section Heading</h2>
           <h3>h3 Section Heading</h3>
           <h4>h4 Section Heading</h4>
           <h5>h5 Section Heading</h5>
+          <p>A short paragraph with a link to </p>
 
           <p>
-            A short paragraph with a link to{" "}
-            <a href="https://www.google.com">Google</a>.
+            An example of a longer paragraph that will be used in your blog
+            posts when you create your own website or blog. And add as much
+            additional content here as you want. An example of a longer
+            paragraph that will be used in your blog posts when you create your
+            own website or blog. Also an example of a{" "}
           </p>
+
           <p>
             An example of a longer paragraph that will be used in your blog
             posts when you create your own website or blog. And add as much
             additional content here as you want. An example of a longer
             paragraph that will be used in your blog posts when you create your
             own website or blog. Also an example of a{" "}
-            <a href="https://www.google.com">link could go here</a>.
-          </p>
-          <p>
-            An example of a longer paragraph that will be used in your blog
-            posts when you create your own website or blog. And add as much
-            additional content here as you want. An example of a longer
-            paragraph that will be used in your blog posts when you create your
-            own website or blog. Also an example of a{" "}
-            <a href="https://www.google.com">link could go here</a>.
           </p>
 
           <p>Ordered List:</p>
@@ -70,24 +70,16 @@ const BlogPost = () => {
             <li>
               A short code snippet: <code>code snippet</code>
             </li>
-            <li>
-              A link inside a unordered list bullet{" "}
-              <a href="https://www.google.com">Google</a>
-            </li>
+            <li>A link inside a unordered list bullet </li>
           </ol>
-
           <p>Unordered List:</p>
           <ul>
             <li>A sentence goes here.</li>
             <li>
               A short code snippet: <code>code snippet</code>
             </li>
-            <li>
-              A link inside a unordered list bullet{" "}
-              <a href="https://www.google.com">Google</a>
-            </li>
+            <li>A link inside a unordered list bullet </li>
           </ul>
-
           <div className={classes.blog_post__body__code__snippet}>
             <nav className={classes.blog_post__body__code__snippet__header}>
               <span>example.html</span>
@@ -98,11 +90,10 @@ const BlogPost = () => {
                     <div>
                         <p>Html code example</p>
                     </div>
-          `}
+                `}
               </code>
             </pre>
           </div>
-
           <div className={classes.blog_post__body__code__snippet}>
             <nav className={classes.blog_post__body__code__snippet__header}>
               <span>example.js</span>
@@ -125,7 +116,6 @@ const BlogPost = () => {
               </code>
             </pre>
           </div>
-
           <div className={classes.blog_post__body__code__snippet}>
             <nav className={classes.blog_post__body__code__snippet__header}>
               <span>Terminal</span>
@@ -138,7 +128,6 @@ const BlogPost = () => {
               </code>
             </pre>
           </div>
-
           <img src="https://assets.coderrocketfuel.com/css-article-image.png" />
           <blockquote>
             Warning or special message that you want to stand out should be
