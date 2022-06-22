@@ -16,7 +16,7 @@ const GoogleAnalytics = () => {
                 function gtag(){dataLayer.push(arguments);}
                 gtag("js", new Date());
 
-                gtag("config", "${process.env.GOOGLE_ANALYTICS_ID}");`,
+                gtag("config", "G-5LD2MPH727");`,
         }}
       />
     </>
