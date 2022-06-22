@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 import classes from "../styles/components/layout.module.scss";
+import GoogleAnalytics from "./googleAnalytics";
 
 const Layout = ({
   children,
@@ -41,6 +42,7 @@ const Layout = ({
           content="J4mJKqVAGKyQzY7lDv2fxN1yJyhnBqeNAxRJs0IF1zM"
         />
       </Head>
+      <GoogleAnalytics />
       <Header />
       {children}
 
