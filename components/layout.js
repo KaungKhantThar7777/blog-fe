@@ -36,6 +36,10 @@ const Layout = ({
         />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
+        <meta
+          name="google-site-verification"
+          content="J4mJKqVAGKyQzY7lDv2fxN1yJyhnBqeNAxRJs0IF1zM"
+        />
       </Head>
       <Header />
       {children}
