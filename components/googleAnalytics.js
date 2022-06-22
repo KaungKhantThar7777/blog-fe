@@ -1,24 +1,26 @@
-import Head from "next/head";
+import Script from "next/script";
 
 const GoogleAnalytics = () => {
-  return (
+  return process.env.NODE_ENV === "production" &&
+    typeof window !== "undefined" ? (
     <>
-      {process.env.NODE_ENV === "production" &&
-      typeof window !== "undefined" ? (
-        <Head>
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-5LD2MPH727"
-          ></script>
-          <script>
-            window.dataLayer = window.dataLayer || []; function gtag()
-            {dataLayer.push(arguments)}
-            gtag('js', new Date()); gtag('config', 'G-5LD2MPH727');
-          </script>
-        </Head>
-      ) : null}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-5LD2MPH727"
+      />
+
+      <Script
+        async
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag("js", new Date());
+
+                gtag("config", "${process.env.GOOGLE_ANALYTICS_ID}");`,
+        }}
+      />
     </>
-  );
+  ) : null;
 };
 
 export default GoogleAnalytics;
