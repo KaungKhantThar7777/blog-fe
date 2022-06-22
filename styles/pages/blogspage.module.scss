@@ -1,5 +1,8 @@
 .blogs {
   &__list {
     padding: 40px 0;
+    & li {
+      margin-bottom: 20px;
+    }
   }
 }

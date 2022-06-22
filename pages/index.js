@@ -5,7 +5,20 @@ import classes from "../styles/pages/homepage.module.scss";
 import Link from "next/link";
 import BlogCard from "../components/BlogCard";
 
+import { usePosts } from "../api/usePosts";
+
 const Index = () => {
+  const { data, error } = usePosts({
+    limit: 5,
+  });
+
+  if (!data && !error) {
+    return (
+      <Layout title="loading">
+        <p>Loading...</p>
+      </Layout>
+    );
+  }
   return (
     <Layout
       title="Coding Blog"
@@ -29,9 +42,11 @@ const Index = () => {
           </div>
 
           <ul className={classes.blogs}>
-            <li>
-              <BlogCard />
-            </li>
+            {data.map((blog) => (
+              <li key={blog._id}>
+                <BlogCard blog={blog} />
+              </li>
+            ))}
           </ul>
         </div>
       </div>

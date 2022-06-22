@@ -14,9 +14,10 @@
     width: 80px;
     height: 80px;
     img {
-      width: 100%;
+      width: 80px;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
   }
   &__content {
