@@ -20,7 +20,7 @@ const BlogPost = ({ blog }) => {
 
   return (
     <Layout
-      title={`${blog.seoMetaTitle} | Coding Blog`}
+      title={`${blog.title} | Coding Blog`}
       description={blog.seoMetaDescription}
     >
       <div className={classes.blog_post}>
