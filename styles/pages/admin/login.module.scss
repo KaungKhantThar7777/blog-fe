@@ -1,0 +1,37 @@
+.login {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__fields {
+    box-shadow: 0px 0px 16px #bebcbc;
+    width: 400px;
+    padding: 40px;
+    h2 {
+      font-weight: 400;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    label {
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    input {
+      padding: 10px;
+    }
+    button {
+      background: #29339b;
+      padding: 10px;
+      color: #fff;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

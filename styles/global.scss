@@ -7,7 +7,7 @@
 body {
   margin: 0;
   background: #fff;
-  border-top: 5px solid #e5e5e5;
+  // border-top: 5px solid #e5e5e5;
   color: #272727;
   overflow-x: hidden;
   font-family: Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI,
@@ -24,7 +24,7 @@ a {
   transition: border-bottom 0.2s ease-out;
   text-decoration: none;
   &:hover {
-    border-bottom: 2px solid #272727;
+    // border-bottom: 2px solid #272727;
     color: #272727;
   }
 }

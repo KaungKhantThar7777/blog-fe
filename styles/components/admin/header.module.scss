@@ -1,0 +1,21 @@
+.header {
+  background-color: #3288d2;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: #fff;
+    :hover {
+      text-decoration: none;
+    }
+  }
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}

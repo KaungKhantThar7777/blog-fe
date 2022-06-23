@@ -1,0 +1,13 @@
+.layout {
+  &__content__wrapper {
+    display: flex;
+  }
+  &__content {
+    margin-left: 250px;
+
+    background-color: #fff;
+    padding: 20px 40px;
+    min-width: calc(100vw - 250px);
+    min-height: calc(100vh - 60px);
+  }
+}
