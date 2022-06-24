@@ -1,0 +1,16 @@
+.input {
+  div {
+    margin-top: 4px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    input,
+    textarea {
+      flex: 1;
+      max-width: 500px;
+    }
+    p {
+      color: green;
+    }
+  }
+}
