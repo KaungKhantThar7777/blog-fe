@@ -1,3 +1,4 @@
+@import "mixins/spaceBetween.module.scss";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -34,4 +35,13 @@ ul {
 }
 .cm-editor {
   min-height: 200px;
+}
+
+.delete-btn {
+  width: 500px;
+  background-color: #e94c4c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
 }

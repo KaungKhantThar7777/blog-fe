@@ -7,10 +7,11 @@ import TextInput from "components/form/TextInput";
 
 import classes from "styles/components/admin/blogform.module.scss";
 import TextArea from "components/form/TextArea";
+import { DateTime } from "luxon";
 const BlogForm = ({ isEdit, initialState, onSubmit }) => {
   const [state, setState] = useState({
     title: "",
-    date: new Date(),
+    dateTimestamp: DateTime.now().toISO().slice(0, 19),
     thumbnailImageUrl: "",
     tags: "",
     markdownContent: "",
@@ -20,7 +21,7 @@ const BlogForm = ({ isEdit, initialState, onSubmit }) => {
 
   const {
     title,
-    date,
+    dateTimestamp,
     thumbnailImageUrl,
     tags,
     markdownContent,
@@ -36,7 +37,12 @@ const BlogForm = ({ isEdit, initialState, onSubmit }) => {
 
   useEffect(() => {
     if (isEdit && initialState) {
-      setState(initialState);
+      setState({
+        ...initialState,
+        dateTimestamp: DateTime.fromSeconds(initialState.dateTimestamp)
+          .toISO()
+          .slice(0, 19),
+      });
     }
   }, [isEdit]);
   const handleSubmit = (e) => {
@@ -54,10 +60,10 @@ const BlogForm = ({ isEdit, initialState, onSubmit }) => {
       />
 
       <TextInput
-        name="date"
+        name="dateTimestamp"
         type="datetime-local"
         onChange={handleChange}
-        value={date}
+        value={dateTimestamp}
         label={"Date"}
       />
 

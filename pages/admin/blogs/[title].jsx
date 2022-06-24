@@ -20,8 +20,11 @@ const EditBlog = () => {
 
   return (
     <AdminLayout>
-      <h2>Edit Blog Post</h2>
-      <BlogForm initialState={data} isEdit={true} />
+      <div>
+        <h2>Edit Blog Post</h2>
+        <BlogForm initialState={data} isEdit={true} />
+        <button className="delete-btn">Delete</button>
+      </div>
     </AdminLayout>
   );
 };

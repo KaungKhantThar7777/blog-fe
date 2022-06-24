@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import AdminLayout from "components/adminLayout";
 import BlogForm from "components/admin/BlogForm";
@@ -8,7 +8,7 @@ const CreateBlog = () => {
   };
   return (
     <AdminLayout>
-      <div className={classes.create__blog}>
+      <div>
         <h2>Create New Blog Post</h2>
         <BlogForm onSubmit={handleSubmit} />
       </div>
