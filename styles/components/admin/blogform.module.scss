@@ -1,0 +1,25 @@
+.form {
+  width: 600px;
+  input,
+  textarea {
+    padding: 10px 20px;
+  }
+  > * {
+    width: 100%;
+    margin-top: 20px;
+  }
+  button {
+    max-width: 500px;
+    padding: 10px 20px;
+
+    cursor: pointer;
+    background-color: #3288d2;
+    border: none;
+    color: #ffffff;
+  }
+}
+
+.input {
+  max-width: 500px;
+  margin-top: 4px;
+}

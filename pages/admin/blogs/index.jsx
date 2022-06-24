@@ -68,7 +68,7 @@ const Blogs = () => {
                     "dd LLLL yyyy"
                   )}
                 </p>
-                <Link href={`/admin/blogs/${blog._id}`}>
+                <Link href={`/admin/blogs/${blog.urlTitle}`}>
                   <a>Edit &gt;</a>
                 </Link>
               </div>
