@@ -1,11 +1,27 @@
+import { useMutation } from "api/useMutation";
+import { useRouter } from "next/router";
 import React from "react";
 
 import classes from "styles/pages/admin/login.module.scss";
 const Login = () => {
+  const login = useMutation("/login");
+  const router = useRouter();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.elements[0].value);
-    console.log(e.target.elements[1].value);
+
+    login({
+      data: {
+        email: e.target.elements[0].value,
+        password: e.target.elements[1].value,
+      },
+    })
+      .then((res) => {
+        router.push("/admin");
+      })
+      .catch((e) => {
+        console.log(e.message);
+      });
     console.log(e.target.elements[2]);
   };
   return (
