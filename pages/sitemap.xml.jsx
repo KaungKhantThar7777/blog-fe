@@ -19,7 +19,7 @@ export const getServerSideProps = async ({ res }) => {
          ${blogs.map(
            (blog) => `
            <url>
-             <loc>https://blog-fe-kaungkhantthar.vercel.app/blogs/${
+             <loc>https://blog-fe-kaungkhantthar.vercel.app/blog/${
                blog.urlTitle
              }</loc>
              <lastmod>${new Date().toISOString()}</lastmod>
