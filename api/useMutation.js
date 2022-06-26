@@ -16,6 +16,7 @@ export const useMutation = (path) => {
       credentials: "include",
       body: JSON.stringify(data),
     }).then((res) => res.json());
+
     mutate(validateUrl);
     return res;
   };
