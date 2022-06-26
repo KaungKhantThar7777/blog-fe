@@ -10,8 +10,9 @@ const Header = () => {
   const logout = useMutation("/logout");
 
   const handleLogout = () => {
-    logout();
-    router.push("/admin/login");
+    logout().then((res) => {
+      router.push("/admin/login");
+    });
   };
   return (
     <div className={classes.header}>
