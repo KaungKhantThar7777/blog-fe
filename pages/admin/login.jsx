@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
 import classes from "styles/pages/admin/login.module.scss";
+import { API_URL } from "utils/constants";
 const Login = () => {
   const login = useMutation("/login");
   const { data } = useIsLoggedIn();
@@ -22,6 +23,7 @@ const Login = () => {
         email: e.target.elements[0].value,
         password: e.target.elements[1].value,
       },
+      validateUrl: `${API_URL}/isLoggedIn`,
     })
       .then((res) => {
         console.log("success", res);
