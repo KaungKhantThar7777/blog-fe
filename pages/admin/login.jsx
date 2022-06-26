@@ -1,12 +1,19 @@
+import { useIsLoggedIn } from "api/fetcher";
 import { useMutation } from "api/useMutation";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 
 import classes from "styles/pages/admin/login.module.scss";
 const Login = () => {
   const login = useMutation("/login");
+  const { data } = useIsLoggedIn();
   const router = useRouter();
 
+  useEffect(() => {
+    if (data && data.isLoggedIn) {
+      router.push("/admin");
+    }
+  }, [data]);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -17,12 +24,15 @@ const Login = () => {
       },
     })
       .then((res) => {
-        router.push("/admin");
+        console.log("success", res);
+        if (res.success) {
+          console.log("here");
+          router.push("/admin");
+        }
       })
       .catch((e) => {
         console.log(e.message);
       });
-    console.log(e.target.elements[2]);
   };
   return (
     <div className={classes.login}>

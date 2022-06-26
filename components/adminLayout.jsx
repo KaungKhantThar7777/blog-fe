@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Cookie from "js-cookie";
 
 import Header from "./admin/Header";
 import SideBar from "./admin/Sidebar";

@@ -8,10 +8,10 @@ const SideBar = () => {
 
   return (
     <div className={classes.sidebar}>
-      <Link href="/admin/blogs">
+      <Link href="/admin">
         <a
           className={
-            router.pathname === "/admin/blogs" ? classes.sidebar__active : ""
+            router.pathname === "/admin" ? classes.sidebar__active : ""
           }
         >
           Blog Posts

@@ -48,7 +48,10 @@ const BlogForm = ({ isEdit, initialState, onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    onSubmit(state);
+    onSubmit({
+      ...state,
+      dateTimestamp: DateTime.fromISO(state.dateTimestamp).toSeconds(),
+    });
   };
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
