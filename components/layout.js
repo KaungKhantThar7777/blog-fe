@@ -41,6 +41,7 @@ const Layout = ({
           name="google-site-verification"
           content="J4mJKqVAGKyQzY7lDv2fxN1yJyhnBqeNAxRJs0IF1zM"
         />
+        <meta name="robots" content="all" />
       </Head>
       <GoogleAnalytics />
       <Header />
